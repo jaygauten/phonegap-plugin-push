@@ -17,7 +17,7 @@ public class PushInstanceIDListenerService extends FirebaseMessagingService impl
     public static final String LOG_TAG = "Push_InsIdService";
 
     @Override
-    public void onNewToken() {
+    public void onNewToken(String s) {
         // Get updated InstanceID token.
         String refreshedToken = FirebaseInstanceId.getInstance().getToken();
         Log.d(LOG_TAG, "Refreshed token: " + refreshedToken);
